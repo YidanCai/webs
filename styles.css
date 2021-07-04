@@ -1,0 +1,90 @@
+
+button {
+    width: 120px;
+    height: 60px;
+    /*margin-left: 35px;*/
+    /*display: block;*/
+    background-color: blue;
+    color: white;
+    border: none;
+    outline: none;
+    text-align: center;
+
+}
+.bubbles img{
+    width: 50px;
+    animation: bubble 8s linear infinite;
+    z-index: 2;
+
+}
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 2s;
+    width: 40px;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 3s;
+    width: 25px;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 1s;
+    width: 20px;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 4s;
+    width: 45px;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 5ss;
+    width: 30px;
+}
+.bubbles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -50px;
+}
+@keyframes  bubble {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+
+}
+
+.btn {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 30px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin-top: 40px;
+
+
+
+
+}
+.btn:hover {background: #eee;}
+
+.study{color: #188056;}
+.work {color: #774fff;}
+.life {color: #5d9cff;}
+
