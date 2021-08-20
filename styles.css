@@ -4,7 +4,7 @@ button {
     height: 60px;
     /*margin-left: 35px;*/
     /*display: block;*/
-    background-color: blue;
+    background-color: black;
     color: white;
     border: none;
     outline: none;
@@ -85,6 +85,6 @@ button {
 .btn:hover {background: #eee;}
 
 .study{color: #188056;}
-.work {color: #774fff;}
+.work {color: #710193;}
 .life {color: #5d9cff;}
 

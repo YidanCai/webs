@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--Acknoledgement: This autocomplete search bar feature is mainly based on the work of CodeNepal, link
+https://dev.to/codingnepal/search-bar-with-autocomplete-search-suggestions-in-javascript-32dn-->
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <title>Search for sponsors</title>
+    <link rel="stylesheet" href="search_style.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="Type to check..">
+        <div class="autocom-box">
+
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+
+    </div>
+    <div class = "search-output">
+      <div class = "response1"></div>
+      <span class = "companyName"></span>
+      <span class = "endSentence"></span>
+      <div class="autocorrection">
+      </div>
+    </div>
+
+<!--    <textarea id="display" style="width:100px;height:100px"></textarea>-->
+    <script  src="companies.js"></script>
+     <script src="suggestionsAlgorithm.js"></script>
+     <script src="search_script.js"></script>
+
+  </body>
+</html>
