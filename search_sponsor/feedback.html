@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--Acknowledgement: star rating reference :
+https://www.markuptag.com/feedback-form-with-star-rating-html/-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedbackStyle.css">
+    <style>
+        body{
+            background: #4169E1;
+            padding: 0 20px;
+        }
+        input{
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        textarea {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            width: 50%;
+            font-size: 15px;
+        }
+        button {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            /*margin: 4px 2px;*/
+            border-radius: 4px;
+            height: 20px;
+            vertical-align: middle;
+            line-height: 0px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+</head>
+<body>
+
+<div style="text-align: center; margin: 80px auto">
+    <form
+            action="https://formspree.io/f/mdoypykw"
+            method="POST"
+    >
+        <div style="margin: 20px  auto; color: white">
+            <label>
+                <p>Your email:</p>
+                <input type="email" name="_replyto">
+            </label>
+        </div>
+        <div style="margin: 20px auto; color: white">
+            <label>
+                <p>Your message:</p>
+                <textarea name="message" rows="7"></textarea>
+            </label>
+        </div>
+
+        <div class="star-rating">
+            <div class="giveFeedback-msg">Give your rating</div>
+            <div class="star-input">
+                <input type="radio" name="rating" id="rating-5" value = 5>
+                <label for="rating-5" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="rating-4" value = 4>
+                <label for="rating-4" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="rating-3" value = 3>
+                <label for="rating-3" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="rating-2" value= 2>
+                <label for="rating-2" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="rating-1" value = 1>
+                <label for="rating-1" class="fas fa-star"></label>
+
+            </div>
+
+
+        </div>
+        <span class="rating-reaction"></span>
+        <button type="submit" class="submit-rating">Submit</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

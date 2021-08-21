@@ -74,7 +74,9 @@ function clickCheckButton(userData){
             outputBox.querySelector(".companyName").innerHTML = "\xa0" + userData + "\xa0";
             outputBox.querySelector(".endSentence").innerHTML = " \xa0is Not a recognized sponsor name";
             autocorrectArray = suggestions.filter((data) => {
-                return data.split(" ").map((element) => {return element.toLocaleLowerCase();}).includes(userData.toLocaleLowerCase());
+                // return data.split(" ").map((element) => {return element.toLocaleLowerCase();}).includes(userData.toLocaleLowerCase());
+                //check if userdata or userdata add ".com" is part of the sponsor name, one liner:)
+                return [userData.toLocaleLowerCase(), userData+'.com'].some(r => data.split(" ").map((element) => {return element.toLocaleLowerCase();}).includes(r));
             });
             if (autocorrectArray.length>0) {
                 outputBox.querySelector(".autocorrection").innerHTML = "<i>Do you mean the following recognized sponsor(s)?</i>";
