@@ -10,6 +10,25 @@ body{
   background: #4169E1;
   padding: 0 20px;
 }
+.linkToSponsorPage{
+  color: #fffd98;
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 5px;
+
+}
+
+.title{
+  max-width: 1000px;
+  margin: 100px auto;
+  left:0;
+  right:0;
+  color: white;
+  text-align: center;
+  font-family: "Lucida Console";
+  font-size: 30px;
+
+}
 
 ::selection{
   color: #fff;
@@ -18,7 +37,10 @@ body{
 
 .wrapper{
   max-width: 450px;
-  margin: 150px auto;
+  margin: auto;
+  left:0;
+  right:0;
+
 }
 
 .wrapper .search-input{
@@ -90,6 +112,7 @@ body{
 .search-output{
     color:white;
     text-align: center;
+    margin: 50px auto;
 }
 .response1{
     font-size: 35px;
@@ -107,4 +130,51 @@ body{
 .autocorrection{
     padding-top: 10px;
     font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+.auto-list::before {
+  content:'';
+  position: absolute;
+  background-color: pink;
+  width: 50%;
+  height: 3px;
+  /*top: 0;*/
+  left: 25%;
+  display: var(--show);
+
+
+}
+
+/* bottom line */
+.auto-list::after {
+  content:'';
+  position: absolute;
+  background-color: pink;
+  width: 50%;
+  height: 3px;
+  /*bottom: 0;*/
+  left: 25%;
+  display: var(--show);
+
+}
+
+.auto-list{
+  padding-top: 10px;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+:root {
+  --show: none;
+}
+
+.foot-update{
+  font-size: 10px;
+  color: lightblue;
+  text-align: center;
+
+  bottom: 0;
 }
