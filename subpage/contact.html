@@ -2,7 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Send Message</title>
+    <style>
+        input{
+            /*-webkit-border-radius: 5px;*/
+            /*-moz-border-radius: 5px;*/
+            /*border-radius: 5px;*/
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        textarea {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            width: 50%;
+            font-size: 15px;
+        }
+        button {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            /*margin: 4px 2px;*/
+            border-radius: 4px;
+            height: 20px;
+            vertical-align: middle;
+            line-height: 0px;
+        }
+    </style>
 </head>
 <div class = "container" style= "text-align: center">
 <form
@@ -10,22 +42,23 @@
         method="POST"
         style="padding-top: 40px"
 >
-    <div>
+    <div style="margin: 30px  auto;">
         <label>
-            Your email:
+            Name:
+            <input type= "text" name="Name" style="width: 180px">
+        </label>
+    </div>
+    <div style="margin: 30px  auto;">
+        <label>
+            Email:
             <input type="email" name="_replyto">
         </label>
     </div>
-
-    <div style="padding-top: 40px; padding-bottom: 5px">
+    <div style="margin: 20px auto; ">
         <label>
-            Your message:
+            <p>Your message:</p>
+            <textarea name="message" rows="7"></textarea>
         </label>
-
-    </div>
-    <div>
-        <textarea name="message", style="height:100px; width: 300px; padding-bottom: 40px",
-                  placeholder="Type here.."></textarea>
     </div>
 <!--    no file upload option for a free plan-->
 <!--    <div>-->

@@ -95,6 +95,7 @@ function select(element){
     clickCheckButton(selectData);
     searchWrapper.classList.remove("active");
 }
+
 function showSuggestions(list){
     let listData;
     if(!list.length){
@@ -104,7 +105,6 @@ function showSuggestions(list){
     }
     else{
       listData = list.join('');
-
 
     }
 

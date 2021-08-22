@@ -38,7 +38,7 @@ button {
     width: 45px;
 }
 .bubbles img:nth-child(6){
-    animation-delay: 5ss;
+    animation-delay: 5s;
     width: 30px;
 }
 .bubbles{
@@ -77,8 +77,7 @@ button {
     display: inline-block;
     text-align: center;
     margin-top: 40px;
-
-
+    text-decoration: underline;
 
 
 }
@@ -88,3 +87,24 @@ button {
 .work {color: #710193;}
 .life {color: #5d9cff;}
 
+
+.appButton {
+    border: none;
+    background-color: inherit;
+    padding: 14px 18px;
+    width: 250px;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    color: darkgray;
+    text-decoration: underline;
+
+}
+
+.appButton:hover {background: #eee;}
+
+.contactButton{
+    cursor: pointer;
+}
