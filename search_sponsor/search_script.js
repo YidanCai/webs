@@ -10,8 +10,53 @@ let linkTag = searchWrapper.querySelector("a");
 var selectSuggestionNo = -1;
 // if user press any key and release in the inputbox
 let autocorrectArray =[];
-inputBox.onkeyup = (e)=>{
-    if (e.key.length == 1 || e.key == "Backspace"){
+// inputBox.onkeyup = (e)=>{
+//     if (e.key.length == 1 || e.key == "Backspace"){
+//         // let userData = e.target.value; //user entered data
+//         let userData = inputBox.value;
+//         let emptyArray = [];
+//         let commonStringArray = [];
+//         selectSuggestionNo = -1;
+//
+//         if(userData){
+//             suggBox.style.display= "block";
+//             clickCheckButton(userData);
+//
+//             emptyArray = suggestions.filter((data)=>{
+//                 //suggestion autocomplete: start with the same characters
+//                 return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+//             });
+//
+//             commonStringArray = suggestions.filter((data)=>{
+//                 //suggestion autocomplete: common string length larger than half of the data length
+//                 return LCSubStr(data.toLocaleLowerCase(),userData.toLocaleLowerCase(),data.length,userData.length)
+//                     > Math.max(data.length/2, userData.length)
+//                     && !data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+//             });
+//             emptyArray = emptyArray.concat(commonStringArray)
+//             emptyArray = emptyArray.map((data)=>{
+//                 // passing return data inside li tag
+//                 return data = `<li>${data}</li>`;
+//             });
+//             searchWrapper.classList.add("active"); //show autocomplete box
+//             showSuggestions(emptyArray);
+//             let allList = suggBox.querySelectorAll("li");
+//             autocorrectArray = allList;
+//             for (let i = 0; i < allList.length; i++) {
+//                 //adding onclick attribute in all li tag
+//                 allList[i].setAttribute("onclick", "select(this)");
+//                 allList[i].setAttribute("onMouseOver",  "hoverSuggboxItem(this)");
+//                 allList[i].setAttribute("onMouseOut",  "moveOutSuggboxItem(this)");
+//             }
+//         }else{
+//             searchWrapper.classList.remove("active"); //hide autocomplete box
+//         }
+//     }
+//
+// }
+
+inputBox.addEventListener('input', function (e){
+
         // let userData = e.target.value; //user entered data
         let userData = inputBox.value;
         let emptyArray = [];
@@ -51,54 +96,9 @@ inputBox.onkeyup = (e)=>{
         }else{
             searchWrapper.classList.remove("active"); //hide autocomplete box
         }
-    }
-
-}
-
-inputBox.onchange = (e)=>{
-
-        // let userData = e.target.value; //user entered data
-        let userData = inputBox.value;
-        let emptyArray = [];
-        let commonStringArray = [];
-        selectSuggestionNo = -1;
-
-        if(userData){
-            suggBox.style.display= "block";
-            clickCheckButton(userData);
-
-            emptyArray = suggestions.filter((data)=>{
-                //suggestion autocomplete: start with the same characters
-                return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
-            });
-
-            commonStringArray = suggestions.filter((data)=>{
-                //suggestion autocomplete: common string length larger than half of the data length
-                return LCSubStr(data.toLocaleLowerCase(),userData.toLocaleLowerCase(),data.length,userData.length)
-                    > Math.max(data.length/2, userData.length)
-                    && !data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
-            });
-            emptyArray = emptyArray.concat(commonStringArray)
-            emptyArray = emptyArray.map((data)=>{
-                // passing return data inside li tag
-                return data = `<li>${data}</li>`;
-            });
-            searchWrapper.classList.add("active"); //show autocomplete box
-            showSuggestions(emptyArray);
-            let allList = suggBox.querySelectorAll("li");
-            autocorrectArray = allList;
-            for (let i = 0; i < allList.length; i++) {
-                //adding onclick attribute in all li tag
-                allList[i].setAttribute("onclick", "select(this)");
-                allList[i].setAttribute("onMouseOver",  "hoverSuggboxItem(this)");
-                allList[i].setAttribute("onMouseOut",  "moveOutSuggboxItem(this)");
-            }
-        }else{
-            searchWrapper.classList.remove("active"); //hide autocomplete box
-        }
 
 
-}
+});
 
 
 inputBox.addEventListener("keyup", function(event) {
